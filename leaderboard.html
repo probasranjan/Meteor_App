@@ -1,0 +1,24 @@
+<head>
+    <title>Meteor Assignment</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    {{> username}}
+</body>
+
+<template name="username">
+{{> userform}}
+<ul>
+    {{#each player}}
+        <li class="player {{selectedClass}}">{{name}}: {{age}}</li>
+    {{/each}}
+   
+</ul>
+</template>
+
+<template name="userform">
+    <form>
+        <input type="text" name="Name">
+        <input type="submit" value="Add Name">
+    </form>
+</template>
